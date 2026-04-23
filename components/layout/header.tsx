@@ -39,7 +39,7 @@ export function Header() {
           <a href="#inicio" className="flex items-center gap-3">
             <div className="relative h-12 w-12 overflow-hidden rounded-full border border-brand-line bg-white shadow-sm">
               <Image
-                src="/logo.png"
+                src="/logo-png.png"
                 alt="Logo Parametro Imaginario"
                 fill
                 className="object-contain p-1"
