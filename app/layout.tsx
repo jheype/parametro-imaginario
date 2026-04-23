@@ -3,6 +3,8 @@ import './globals.css';
 import { Header } from '@/components/layout/header';
 import { Footer } from '@/components/layout/footer';
 import { FloatingWhatsApp } from '@/components/layout/floating-whatsapp';
+import { Analytics } from '@vercel/analytics/next';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.parametroimaginario.pt'),
@@ -100,6 +102,8 @@ export default function RootLayout({
         {children}
         <Footer />
         <FloatingWhatsApp />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
