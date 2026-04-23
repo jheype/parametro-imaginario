@@ -21,10 +21,6 @@ export function HeroSection() {
             <h1 className="max-w-4xl font-serif text-5xl leading-none sm:text-6xl lg:text-8xl">
               Construção e remodelação com uma apresentação que <span className="italic text-brand-accent">mostra a transformação</span>.
             </h1>
-            <p className="mt-7 max-w-2xl text-lg leading-8 text-brand-muted sm:text-xl">
-              Desenvolvemos obras com clareza, compromisso e atenção ao detalhe, desde a construção de raiz até à entrega final, com acompanhamento próximo em cada etapa.
-            </p>
-
             <div className="mt-9 flex flex-col gap-4 sm:flex-row">
               <SiteButton href="#contacto" variant="secondary">
                 Pedir orçamento

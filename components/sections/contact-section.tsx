@@ -117,7 +117,7 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contacto" className="py-24 sm:py-32">
+    <section id="contacto" className="py-12 sm:py-16">
       <div className="container-shell grid gap-12 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
           <SectionHeading

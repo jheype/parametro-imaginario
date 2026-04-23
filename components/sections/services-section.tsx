@@ -16,7 +16,7 @@ const gridVariants = {
 
 export function ServicesSection() {
   return (
-    <section id="servicos" className="border-b border-brand-line py-24 sm:py-32">
+    <section id="servicos" className="border-b border-brand-line py-12 sm:py-16">
       <div className="container-shell">
         <SectionHeading
           eyebrow="Serviços"

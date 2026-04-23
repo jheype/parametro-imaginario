@@ -1,4 +1,3 @@
-import { AboutSection } from '@/components/sections/about-section';
 import { BeforeAfterShowcase } from '@/components/sections/before-after-showcase';
 import { ContactSection } from '@/components/sections/contact-section';
 import { GallerySection } from '@/components/sections/gallery-section';
@@ -13,9 +12,8 @@ export default function Page() {
     <main>
       <HeroSection />
       <BeforeAfterShowcase />
-      <AboutSection />
-      <ScrollStorySection />
       <ServicesSection />
+      <ScrollStorySection />
       <ProjectsSection />
       <GallerySection />
       <ProcessSection />

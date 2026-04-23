@@ -7,7 +7,7 @@ import { galleryImages, contactDetails } from '@/lib/site-data';
 
 export function GallerySection() {
   return (
-    <section className="border-b border-brand-line py-24 sm:py-32">
+    <section className="border-b border-brand-line py-12 sm:py-16">
       <div className="container-shell">
         <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading

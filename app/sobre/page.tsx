@@ -2,9 +2,9 @@ import { FadeIn } from '@/components/ui/fade-in';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { trustItems } from '@/lib/site-data';
 
-export function AboutSection() {
+export default function AboutPage() {
   return (
-    <section id="sobre" className="border-b border-brand-line py-24 sm:py-32">
+    <section id="sobre" className="border-b border-brand-line py-12 sm:py-16 mt-16">
       <div className="container-shell grid gap-14 lg:grid-cols-[0.9fr_1.1fr]">
         <div>
           <SectionHeading

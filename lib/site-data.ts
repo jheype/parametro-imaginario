@@ -27,12 +27,12 @@ export type ProcessItem = {
 };
 
 export const navItems: NavItem[] = [
-  { label: 'Início', href: '#inicio' },
-  { label: 'Sobre', href: '#sobre' },
-  { label: 'Serviços', href: '#servicos' },
-  { label: 'Projetos', href: '#projetos' },
-  { label: 'Processo', href: '#processo' },
-  { label: 'Contacto', href: '#contacto' },
+  { label: 'Início', href: '/' },
+  { label: 'Sobre', href: '/sobre' },
+  { label: 'Serviços', href: '/#servicos' },
+  { label: 'Projetos', href: '/#projetos' },
+  { label: 'Processo', href: '/#processo' },
+  { label: 'Contacto', href: '/#contacto' },
 ];
 
 export const serviceItems: ServiceItem[] = [

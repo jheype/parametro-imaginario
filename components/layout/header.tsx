@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { Menu, Phone, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -36,7 +37,7 @@ export function Header() {
         ].join(' ')}
       >
         <div className="container-shell flex h-20 items-center justify-between">
-          <a href="#inicio" className="flex items-center gap-3">
+          <Link href="/" className="flex items-center gap-3">
             <div className="relative h-12 w-12 overflow-hidden rounded-full border border-brand-line bg-white shadow-sm">
               <Image
                 src="/logo-png.png"
@@ -55,17 +56,17 @@ export function Header() {
                 Construção e remodelação
               </p>
             </div>
-          </a>
+          </Link>
 
           <nav className="hidden items-center gap-7 lg:flex">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.href}
                 href={item.href}
                 className="text-sm font-medium text-brand-muted transition-colors hover:text-brand-text"
               >
                 {item.label}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -141,14 +142,14 @@ export function Header() {
 
               <div className="mt-10 flex flex-1 flex-col gap-2">
                 {navItems.map((item) => (
-                  <a
+                  <Link
                     key={item.href}
                     href={item.href}
                     onClick={() => setOpen(false)}
                     className="rounded-2xl px-4 py-3 text-base font-medium text-brand-text transition-colors hover:bg-brand-soft"
                   >
                     {item.label}
-                  </a>
+                  </Link>
                 ))}
               </div>
 
