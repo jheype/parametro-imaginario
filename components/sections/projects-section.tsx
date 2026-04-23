@@ -28,13 +28,13 @@ export function ProjectsSection() {
           {projects.map((project, index) => (
             <motion.article
               key={project.title}
-              initial={{ opacity: 0, y: 24 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
+              initial={{ opacity: 0, y: 60, scale: 0.97, filter: 'blur(10px)' }}
+              whileInView={{ opacity: 1, y: 0, scale: 1, filter: 'blur(0px)' }}
+              viewport={{ once: true, amount: 0.15 }}
               transition={{
-                duration: 0.7,
-                delay: index * 0.08,
-                ease: [0.22, 1, 0.36, 1],
+              duration: 0.95,
+              delay: index * 0.12,
+              ease: [0.16, 1, 0.3, 1],
               }}
               className="overflow-hidden rounded-[2rem] border border-brand-line bg-white shadow-[0_24px_70px_rgba(0,0,0,0.05)]"
             >

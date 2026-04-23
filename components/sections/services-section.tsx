@@ -1,6 +1,18 @@
+'use client';
+
+import { motion } from 'framer-motion';
 import { FadeIn } from '@/components/ui/fade-in';
 import { SectionHeading } from '@/components/ui/section-heading';
 import { serviceItems } from '@/lib/site-data';
+
+const gridVariants = {
+  hidden: {},
+  show: {
+    transition: {
+      staggerChildren: 0.12,
+    },
+  },
+};
 
 export function ServicesSection() {
   return (
@@ -20,14 +32,19 @@ export function ServicesSection() {
           }
         />
 
-        <div className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
-          {serviceItems.map((item, index) => {
+        <motion.div
+          variants={gridVariants}
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, amount: 0.1 }}
+          className="mt-14 grid gap-5 md:grid-cols-2 xl:grid-cols-4"
+        >
+          {serviceItems.map((item) => {
             const Icon = item.icon;
 
             return (
               <FadeIn
                 key={item.title}
-                delay={index * 0.06}
                 className="rounded-[1.8rem] border border-brand-line bg-white p-6 shadow-[0_16px_40px_rgba(0,0,0,0.04)]"
               >
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-soft text-brand-accent">
@@ -44,7 +61,7 @@ export function ServicesSection() {
               </FadeIn>
             );
           })}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

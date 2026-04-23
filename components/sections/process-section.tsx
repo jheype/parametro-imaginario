@@ -10,7 +10,7 @@ export function ProcessSection() {
           eyebrow="Processo"
           title={
             <>
-              Um acompanhamento claro, organizado e pensado para dar segurança ao cliente em каждой etapa da obra.
+              Um acompanhamento claro, organizado e pensado para dar segurança ao cliente em cada etapa da obra.
             </>
           }
           description={
