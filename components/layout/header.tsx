@@ -52,9 +52,6 @@ export function Header() {
               <p className="font-serif text-2xl leading-none">
                 Parametro Imaginario
               </p>
-              <p className="mt-1 text-[11px] uppercase tracking-[0.22em] text-brand-muted">
-                Construção e remodelação
-              </p>
             </div>
           </Link>
 

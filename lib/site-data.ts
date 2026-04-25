@@ -38,31 +38,31 @@ export const navItems: NavItem[] = [
 export const serviceItems: ServiceItem[] = [
   {
     title: 'Construção de raiz',
-    description: 'Executamos obras desde a base até à entrega final, com organização, acompanhamento e compromisso em cada etapa.',
+    description: 'Executamos projetos desde a base até à entrega final, com planeamento rigoroso, acompanhamento contínuo e compromisso em cada etapa.',
     icon: Home,
   },
   {
     title: 'Remodelações completas',
-    description: 'Transformamos interiores antigos em espaços renovados, mais modernos, funcionais e valorizados.',
+    description: 'Transformamos espaços antigos em ambientes modernos, funcionais e valorizados, adaptados às necessidades de cada cliente.',
     icon: Paintbrush,
   },
   {
     title: 'Reformas e reabilitação',
-    description: 'Intervimos com rigor técnico e atenção ao detalhe, respeitando o imóvel e o objetivo de cada cliente.',
+    description: 'Intervimos com precisão técnica e atenção ao detalhe, preservando o imóvel e melhorando o seu desempenho e estética.',
     icon: Hammer,
   },
   {
     title: 'Acabamentos',
-    description: 'Cuidamos dos detalhes finais com foco na estética, qualidade e boa execução do espaço.',
+    description: 'Garantimos um acabamento de excelência, com foco nos detalhes, qualidade dos materiais e perfeição na execução.',
     icon: Wrench,
   },
 ];
 
 export const featureStats = [
-  { value: '35 anos', label: 'de experiência no Brasil' },
-  { value: '6 anos', label: 'de atividade em Portugal' },
+  { value: '+35 anos', label: 'de experiência no mercado Brasileiro' },
+  { value: '6 anos', label: 'a servir clientes em Portugal' },
   { value: '3 dias', label: 'prazo médio para envio do orçamento' },
-  { value: 'Lisboa', label: 'e região' },
+  { value: 'Lisboa', label: 'com cobertura completa em arredores' },
 ];
 
 export const trustItems = [
@@ -88,8 +88,8 @@ export const projects: ProjectItem[] = [
     title: 'Remodelação completa de sala e zona social',
     category: 'Antes e depois',
     description: 'Transformação de um espaço em bruto num ambiente mais moderno, amplo e confortável, com acabamentos limpos e uma linguagem visual contemporânea.',
-    beforeImage: '/before.jpeg',
-    afterImage: '/after.jpeg',
+    beforeImage: '/kitchen-before.jpg',
+    afterImage: '/kitchen-after.jpg',
     videoLabel: 'Comparação do resultado final',
   },
   {
@@ -104,8 +104,8 @@ export const projects: ProjectItem[] = [
     title: 'Execução e acabamento de espaço renovado',
     category: 'Obra e acabamento',
     description: 'Intervenção focada na melhoria do espaço, com renovação visível dos materiais, valorização do interior e atenção ao detalhe em toda a execução.',
-    beforeImage: '/before-three.jpeg',
-    afterImage: '/after-three.jpeg',
+    beforeImage: '/stairs-before.jpg',
+    afterImage: '/stairs-after.jpg',
     videoLabel: 'Sequência da transformação',
   },
 ];

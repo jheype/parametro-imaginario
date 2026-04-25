@@ -7,17 +7,17 @@ const phases = [
   {
     title: 'Estado inicial',
     text: 'A secção pode começar com o imóvel original, um terreno vazio ou um espaço desatualizado.',
-    image: 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1600&q=80',
+    image: '/before-three.jpeg',
   },
   {
     title: 'Estrutura a ganhar forma',
     text: 'À medida que o utilizador faz scroll, a narrativa visual mostra a obra a avançar.',
-    image: 'https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1600&q=80',
+    image: '/after-three.jpeg',
   },
   {
     title: 'Resultado final',
     text: 'No fim, o cliente vê o resultado pronto, mais fotos e o CTA para pedir contacto.',
-    image: 'https://images.unsplash.com/photo-1568605114967-8130f3a36994?auto=format&fit=crop&w=1600&q=80',
+    image: '/after-three.jpeg',
   },
 ];
 
