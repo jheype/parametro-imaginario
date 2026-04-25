@@ -125,7 +125,7 @@ export function ContactSection() {
             title={<>Fale connosco e explique o que pretende fazer no seu imóvel.</>}
             description={
               <>
-                Pode entrar em contacto por telefone, WhatsApp ou através do formulário.
+                Pode entrar em contacto por telemóvel ou através do formulário.
                 Respondemos com rapidez e, após a visita ao imóvel, enviamos o orçamento
                 com clareza e dentro do prazo definido.
               </>
@@ -150,7 +150,7 @@ export function ContactSection() {
               >
                 <Phone className="h-5 w-5 text-brand-accent" />
                 <p className="mt-4 text-xs font-bold uppercase tracking-[0.24em] text-brand-muted">
-                  Telefone
+                  Telemóvel
                 </p>
                 <p className="mt-2 font-serif text-2xl">{contactDetails.phoneDisplay}</p>
                 <p className="mt-1 text-sm text-brand-muted">Chamada direta</p>
@@ -240,7 +240,7 @@ export function ContactSection() {
                 </label>
 
                 <label className="grid gap-2 text-sm font-medium text-brand-text">
-                  Telefone / WhatsApp
+                  Telemóvel
                   <input
                     name="telefone"
                     type="tel"
@@ -266,7 +266,7 @@ export function ContactSection() {
                 </label>
 
                 <label className="grid gap-2 text-sm font-medium text-brand-text">
-                  Local da obra
+                  Localidade
                   <input
                     name="local"
                     type="text"
@@ -309,7 +309,7 @@ export function ContactSection() {
                   name="descricao"
                   rows={6}
                   required
-                  placeholder="Descreva resumidamente o tipo de obra, o estado atual do espaço e o que pretende melhorar."
+                  placeholder="Descreva resumidamente o tipo de obra, o estado atual do espaço e o que pretende construir ou remodelar."
                   className="resize-none rounded-3xl border border-brand-line bg-brand-surface px-4 py-4 text-brand-text outline-none transition-colors placeholder:text-brand-muted/70 focus:border-brand-accent"
                 />
               </label>
