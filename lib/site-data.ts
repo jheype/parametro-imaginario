@@ -129,13 +129,43 @@ export const processItems: ProcessItem[] = [
   },
 ];
 
-export const galleryImages = [
-  '/image-01.jpeg',
-  '/image-03.jpeg',
-  '/image-04.jpeg',
-  '/image-05.jpeg',
-  '/image-06.jpeg',
-  '/image-07.jpeg',
+export type GalleryProject = {
+  title: string;
+  description: string;
+  coverImage: string;
+  badges: string[];
+  images: string[];
+};
+
+export const galleryProjects: GalleryProject[] = [
+  {
+    title: 'Remodelação de sala e zona social',
+    description:
+      'Projeto de remodelação interior com foco em amplitude, iluminação e acabamento limpo. O espaço foi trabalhado para ficar mais moderno, confortável e funcional.',
+    coverImage: '/image-01.jpeg',
+    badges: ['Interiores', 'Remodelação', 'Acabamento'],
+    images: [
+      '/image-01.jpeg',
+      '/image-03.jpeg',
+      '/image-04.jpeg',
+      '/image-05.jpeg',
+      '/image-06.jpeg',
+      '/image-07.jpeg',
+    ],
+  },
+  {
+    title: 'Renovação de ambiente residencial',
+    description:
+      'Execução de melhorias no espaço com atenção aos detalhes, qualidade dos materiais e valorização visual do imóvel.',
+    coverImage: '/image-03.jpeg',
+    badges: ['Residencial', 'Obra limpa', 'Detalhes'],
+    images: [
+      '/image-03.jpeg',
+      '/image-04.jpeg',
+      '/image-05.jpeg',
+      '/image-06.jpeg',
+    ],
+  },
 ];
 
 export const contactDetails = {
