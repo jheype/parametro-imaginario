@@ -19,6 +19,8 @@ export type ProjectItem = {
   beforeImage: string;
   afterImage: string;
   videoLabel: string;
+  badges: string[];
+  images: string[];
 };
 
 export type ProcessItem = {
@@ -91,6 +93,27 @@ export const projects: ProjectItem[] = [
     beforeImage: '/kitchen-before.jpg',
     afterImage: '/kitchen-after.jpg',
     videoLabel: 'Comparação do resultado final',
+    badges: ['Sala', 'Zona social', 'Acabamento'],
+    images: [
+      '/kitchen-before.jpg',
+      '/kitchen-after.jpg',
+      '/obra01-01.jpg',
+      '/obra01-02.jpg',
+      '/obra01-03.jpg',
+      '/obra01-04.jpg',
+      '/obra01-05.jpg',
+      '/obra01-06.jpg',
+      '/obra01-07.jpg',
+      '/obra01-08.jpg',
+      '/obra01-09.jpg',
+      '/obra01-10.jpg',
+      '/obra01-11.jpg',
+      '/obra01-12.jpg',
+      '/obra01-13.jpg',
+      '/obra01-14.jpg',
+      '/obra01-15.jpg',
+      '/obra01-16.jpg',
+    ],
   },
   {
     title: 'Renovação integral de casa de banho',
@@ -99,6 +122,12 @@ export const projects: ProjectItem[] = [
     beforeImage: '/before-two.jpeg',
     afterImage: '/after-two.jpeg',
     videoLabel: 'Evolução da obra',
+    badges: ['Casa de banho', 'Revestimentos', 'Funcionalidade'],
+    images: [
+      '/before-two.jpeg',
+      '/after-two.jpeg',
+      '/image-05.jpeg',
+    ],
   },
   {
     title: 'Execução e acabamento de espaço renovado',
@@ -107,6 +136,18 @@ export const projects: ProjectItem[] = [
     beforeImage: '/stairs-before.jpg',
     afterImage: '/stairs-after.jpg',
     videoLabel: 'Sequência da transformação',
+    badges: ['Obra', 'Interiores', 'Detalhes'],
+    images: [
+      '/stairs-before.jpg',
+      '/stairs-after.jpg',
+      '/obra03-01.jpeg',
+      '/obra03-02.jpeg',
+      '/obra03-03.jpeg',
+      '/obra03-04.jpeg',
+      '/obra03-05.jpeg',
+      '/obra03-06.jpeg',
+      '/obra03-07.jpeg',
+    ],
   },
 ];
 
@@ -139,32 +180,60 @@ export type GalleryProject = {
 
 export const galleryProjects: GalleryProject[] = [
   {
-    title: 'Remodelação de sala e zona social',
+    title: 'Projeto residencial 01',
     description:
-      'Projeto de remodelação interior com foco em amplitude, iluminação e acabamento limpo. O espaço foi trabalhado para ficar mais moderno, confortável e funcional.',
+      'Registo visual de obra residencial com foco em acabamento, valorização do espaço e execução cuidada.',
     coverImage: '/image-01.jpeg',
-    badges: ['Interiores', 'Remodelação', 'Acabamento'],
-    images: [
-      '/image-01.jpeg',
-      '/image-03.jpeg',
-      '/image-04.jpeg',
-      '/image-05.jpeg',
-      '/image-06.jpeg',
-      '/image-07.jpeg',
-    ],
+    badges: ['Residencial', 'Remodelação', 'Acabamento'],
+    images: ['/image-01.jpeg'],
   },
   {
-    title: 'Renovação de ambiente residencial',
+    title: 'Projeto residencial 02',
     description:
-      'Execução de melhorias no espaço com atenção aos detalhes, qualidade dos materiais e valorização visual do imóvel.',
+      'Detalhe de intervenção em espaço interior, com atenção aos materiais, proporções e resultado final.',
+    coverImage: '/image-02.jpeg',
+    badges: ['Interiores', 'Obra', 'Detalhes'],
+    images: ['/image-02.jpeg'],
+  },
+  {
+    title: 'Projeto residencial 03',
+    description:
+      'Melhoria de ambiente residencial com execução limpa e acabamento alinhado ao estilo do imóvel.',
     coverImage: '/image-03.jpeg',
-    badges: ['Residencial', 'Obra limpa', 'Detalhes'],
-    images: [
-      '/image-03.jpeg',
-      '/image-04.jpeg',
-      '/image-05.jpeg',
-      '/image-06.jpeg',
-    ],
+    badges: ['Renovação', 'Residencial', 'Execução'],
+    images: ['/image-03.jpeg'],
+  },
+  {
+    title: 'Projeto residencial 04',
+    description:
+      'Registo de obra com foco na transformação visual do espaço e na qualidade dos acabamentos.',
+    coverImage: '/image-04.jpeg',
+    badges: ['Transformação', 'Acabamento', 'Obra limpa'],
+    images: ['/image-04.jpeg'],
+  },
+  {
+    title: 'Projeto residencial 05',
+    description:
+      'Execução de melhorias no imóvel, valorizando funcionalidade, estética e atenção ao detalhe.',
+    coverImage: '/image-05.jpeg',
+    badges: ['Funcionalidade', 'Detalhes', 'Remodelação'],
+    images: ['/image-05.jpeg'],
+  },
+  {
+    title: 'Projeto residencial 06',
+    description:
+      'Intervenção em ambiente residencial com acabamento cuidado e resultado visual mais moderno.',
+    coverImage: '/image-06.jpeg',
+    badges: ['Moderno', 'Interiores', 'Acabamento'],
+    images: ['/image-06.jpeg'],
+  },
+  {
+    title: 'Projeto residencial 07',
+    description:
+      'Registo final de obra com foco em acabamento, organização visual e valorização do espaço.',
+    coverImage: '/image-07.jpeg',
+    badges: ['Finalização', 'Obra', 'Valorização'],
+    images: ['/image-07.jpeg'],
   },
 ];
 
