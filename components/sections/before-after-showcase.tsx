@@ -14,7 +14,7 @@ interface BeforeAfterSliderProps {
   afterLabel?: string;
 }
 
-function BeforeAfterSlider({
+export function BeforeAfterSlider({
   beforeSrc,
   afterSrc,
   beforeAlt = 'Estado inicial do espaço',
@@ -146,12 +146,6 @@ export function BeforeAfterShowcase() {
           afterSrc="/after.jpeg"
         />
 
-        <BeforeAfterSlider
-          beforeSrc="/before2.jpeg"
-          afterSrc="/after2.jpeg"
-          beforeAlt="Estado inicial do segundo espaço"
-          afterAlt="Resultado final do segundo espaço"
-        />
       </div>
     </section>
   );

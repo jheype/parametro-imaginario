@@ -1,4 +1,4 @@
-import { BeforeAfterShowcase } from '@/components/sections/before-after-showcase';
+import { BeforeAfterShowcase, BeforeAfterSlider } from '@/components/sections/before-after-showcase';
 import { ContactSection } from '@/components/sections/contact-section';
 import { GallerySection } from '@/components/sections/gallery-section';
 import { HeroSection } from '@/components/sections/hero-section';
@@ -13,8 +13,16 @@ export default function Page() {
       <HeroSection />
       <BeforeAfterShowcase />
       <ServicesSection />
-      {/* <ScrollStorySection /> */}
+      <section className="border-b border-brand-line py-12 sm:py-16">
+        <div className="container-shell">
+          <BeforeAfterSlider
+            beforeSrc="/before2.jpeg"
+            afterSrc="/after2.jpeg"
+          />
+        </div>
+      </section>
       <ProjectsSection />
+      {/* <ScrollStorySection /> */}
       <GallerySection />
       <ProcessSection />
       <ContactSection />
