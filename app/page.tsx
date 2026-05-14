@@ -13,7 +13,7 @@ export default function Page() {
       <HeroSection />
       <BeforeAfterShowcase />
       <ServicesSection />
-      <section className="border-b border-brand-line py-12 sm:py-16">
+      <section className="border-b border-brand-line pb-12 sm:pb-16">
         <div className="container-shell">
           <BeforeAfterSlider
             beforeSrc="/before2.jpeg"
