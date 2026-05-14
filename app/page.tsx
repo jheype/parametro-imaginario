@@ -4,7 +4,7 @@ import { GallerySection } from '@/components/sections/gallery-section';
 import { HeroSection } from '@/components/sections/hero-section';
 import { ProcessSection } from '@/components/sections/process-section';
 import { ProjectsSection } from '@/components/sections/projects-section';
-import { ScrollStorySection } from '@/components/sections/scroll-story-section';
+//import { ScrollStorySection } from '@/components/sections/scroll-story-section';
 import { ServicesSection } from '@/components/sections/services-section';
 
 export default function Page() {
@@ -13,7 +13,7 @@ export default function Page() {
       <HeroSection />
       <BeforeAfterShowcase />
       <ServicesSection />
-      <ScrollStorySection />
+      {/* <ScrollStorySection /> */}
       <ProjectsSection />
       <GallerySection />
       <ProcessSection />

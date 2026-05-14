@@ -5,18 +5,32 @@ import { motion } from 'framer-motion';
 import { MoveHorizontal } from 'lucide-react';
 import { SectionHeading } from '@/components/ui/section-heading';
 
-export function BeforeAfterShowcase() {
+interface BeforeAfterSliderProps {
+  beforeSrc: string;
+  afterSrc: string;
+  beforeAlt?: string;
+  afterAlt?: string;
+  beforeLabel?: string;
+  afterLabel?: string;
+}
+
+function BeforeAfterSlider({
+  beforeSrc,
+  afterSrc,
+  beforeAlt = 'Estado inicial do espaço',
+  afterAlt = 'Resultado final da obra',
+  beforeLabel = 'Antes',
+  afterLabel = 'Depois',
+}: BeforeAfterSliderProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const [position, setPosition] = useState(50);
   const [dragging, setDragging] = useState(false);
 
   const updatePosition = (clientX: number) => {
     if (!containerRef.current) return;
-
     const rect = containerRef.current.getBoundingClientRect();
     const x = clientX - rect.left;
     const percentage = (x / rect.width) * 100;
-
     setPosition(Math.min(100, Math.max(0, percentage)));
   };
 
@@ -30,13 +44,8 @@ export function BeforeAfterShowcase() {
     updatePosition(event.clientX);
   };
 
-  const handleMouseUp = () => {
-    setDragging(false);
-  };
-
-  const handleMouseLeave = () => {
-    setDragging(false);
-  };
+  const handleMouseUp = () => setDragging(false);
+  const handleMouseLeave = () => setDragging(false);
 
   const handleTouchStart = (event: React.TouchEvent<HTMLDivElement>) => {
     setDragging(true);
@@ -47,10 +56,73 @@ export function BeforeAfterShowcase() {
     updatePosition(event.touches[0].clientX);
   };
 
-  const handleTouchEnd = () => {
-    setDragging(false);
-  };
+  const handleTouchEnd = () => setDragging(false);
 
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 26 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.2 }}
+      transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+      ref={containerRef}
+      onMouseDown={handleMouseDown}
+      onMouseMove={handleMouseMove}
+      onMouseUp={handleMouseUp}
+      onMouseLeave={handleMouseLeave}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+      className="relative mt-14 overflow-hidden rounded-[2rem] border border-brand-line bg-brand-panel shadow-[0_26px_80px_rgba(0,0,0,0.16)] select-none"
+    >
+      <img
+        src={afterSrc}
+        alt={afterAlt}
+        className="h-[380px] w-full object-cover sm:h-[520px]"
+        draggable={false}
+      />
+
+      <div
+        className="absolute inset-y-0 left-0 overflow-hidden border-r-2 border-brand-accent"
+        style={{ width: `${position}%` }}
+      >
+        <img
+          src={beforeSrc}
+          alt={beforeAlt}
+          className="h-[380px] w-full max-w-none object-cover grayscale sm:h-[520px]"
+          style={{ width: `${100 / (position / 100 || 1)}%` }}
+          draggable={false}
+        />
+
+        <div className="absolute left-6 top-6 rounded-full bg-black/60 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white backdrop-blur-sm">
+          {beforeLabel}
+        </div>
+      </div>
+
+      <div className="absolute right-6 top-6 rounded-full bg-brand-accent px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white">
+        {afterLabel}
+      </div>
+
+      <div
+        className="absolute inset-y-0 z-20"
+        style={{ left: `${position}%`, transform: 'translateX(-50%)' }}
+      >
+        <div className="relative h-full w-px bg-brand-accent shadow-[0_0_25px_rgba(181,138,66,0.9)]">
+          <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-3">
+            <div className="flex h-14 w-14 items-center justify-center rounded-full bg-brand-accent text-white shadow-[0_20px_50px_rgba(181,138,66,0.4)]">
+              <MoveHorizontal className="h-5 w-5" />
+            </div>
+
+            <span className="rounded-full bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-[0.22em] text-brand-accent">
+              Arraste
+            </span>
+          </div>
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
+export function BeforeAfterShowcase() {
   return (
     <section className="border-b border-brand-line py-12 sm:py-16">
       <div className="container-shell">
@@ -58,77 +130,28 @@ export function BeforeAfterShowcase() {
           eyebrow="Transformação real"
           title={
             <>
-             Veja a diferença entre o estado inicial do espaço e o resultado final da intervenção.
+              Veja a diferença entre o estado inicial do espaço e o resultado final da intervenção.
             </>
           }
           description={
             <>
-             Este comparador ajuda a perceber de forma imediata a transformação do imóvel, desde a fase inicial até ao acabamento concluído.
+              Este comparador ajuda a perceber de forma imediata a transformação do imóvel, desde a fase inicial até ao acabamento concluído.
             </>
           }
           align="center"
         />
 
-        <motion.div
-          initial={{ opacity: 0, y: 26 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.2 }}
-          transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
-          ref={containerRef}
-          onMouseDown={handleMouseDown}
-          onMouseMove={handleMouseMove}
-          onMouseUp={handleMouseUp}
-          onMouseLeave={handleMouseLeave}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
-          className="relative mt-14 overflow-hidden rounded-[2rem] border border-brand-line bg-brand-panel shadow-[0_26px_80px_rgba(0,0,0,0.16)] select-none"
-        >
-          <img
-            src="/after.jpeg"
-            alt="Resultado final da obra"
-            className="h-[380px] w-full object-cover sm:h-[520px]"
-            draggable={false}
-          />
+        <BeforeAfterSlider
+          beforeSrc="/before.jpeg"
+          afterSrc="/after.jpeg"
+        />
 
-          <div
-            className="absolute inset-y-0 left-0 overflow-hidden border-r-2 border-brand-accent"
-            style={{ width: `${position}%` }}
-          >
-            <img
-              src="/before.jpeg"
-              alt="Estado inicial do espaço"
-              className="h-[380px] w-full max-w-none object-cover grayscale sm:h-[520px]"
-              style={{ width: `${100 / (position / 100 || 1)}%` }}
-              draggable={false}
-            />
-
-            <div className="absolute left-6 top-6 rounded-full bg-black/60 px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white backdrop-blur-sm">
-              Antes
-            </div>
-          </div>
-
-          <div className="absolute right-6 top-6 rounded-full bg-brand-accent px-4 py-2 text-xs font-semibold uppercase tracking-[0.2em] text-white">
-            Depois
-          </div>
-
-          <div
-            className="absolute inset-y-0 z-20"
-            style={{ left: `${position}%`, transform: 'translateX(-50%)' }}
-          >
-            <div className="relative h-full w-px bg-brand-accent shadow-[0_0_25px_rgba(181,138,66,0.9)]">
-              <div className="absolute left-1/2 top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-3">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-brand-accent text-white shadow-[0_20px_50px_rgba(181,138,66,0.4)]">
-                  <MoveHorizontal className="h-5 w-5" />
-                </div>
-
-                <span className="rounded-full bg-white px-3 py-1 text-[10px] font-bold uppercase tracking-[0.22em] text-brand-accent">
-                  Arraste
-                </span>
-              </div>
-            </div>
-          </div>
-        </motion.div>
+        <BeforeAfterSlider
+          beforeSrc="/before2.jpeg"
+          afterSrc="/after2.jpeg"
+          beforeAlt="Estado inicial do segundo espaço"
+          afterAlt="Resultado final do segundo espaço"
+        />
       </div>
     </section>
   );
