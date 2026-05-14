@@ -86,7 +86,7 @@ export default function RootLayout({
       addressLocality: 'Lisboa',
       addressCountry: 'PT',
     },
-    sameAs: ['https://instagram.com/SEU_PERFIL'],
+    sameAs: ['https://instagram.com/moura_obras'],
     description:
       'Empresa de construção, remodelação, reabilitação e acabamentos em Lisboa e região.',
   };
